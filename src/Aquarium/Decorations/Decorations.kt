@@ -8,6 +8,17 @@ fun makeDecorations(){
 // 1.1
     val d1 = Decorations("granite")
     println(d1)
+
+    // 2.- Creamos dos mas decoraciones en makeDecorations d2 con "slate" y d3 también con "slate"
+    val d2 = Decorations("salte")
+    println(d2)
+
+    val d3 = Decorations("slate")
+    println(d3)
+
+    // 3.- Agregamos dos instruncciones println que compare d1 con d2 y d2 con d3
+    println(d1.equals(d2))
+    println(d2.equals(d3))
 }
 
 // A menudo tenemos clase que principalmente actuan como contenedores de datos. En Kotlin, para las clases que principalmente almacenan datos hay una clase
@@ -18,3 +29,4 @@ fun makeDecorations(){
 //todas sus propiedades
 
 data class Decorations(val rocks: String){}
+
