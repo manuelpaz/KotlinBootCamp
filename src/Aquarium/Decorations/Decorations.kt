@@ -4,7 +4,7 @@ fun main(args: Array<String>){
     makeDecorations()
 }
 
-fun makeDecorations(){
+fun makeDecorations() {
 // 1.1
     val d1 = Decorations("granite")
     println(d1)
@@ -25,6 +25,19 @@ fun makeDecorations(){
     val d4: Decorations = d3.copy()
     println(d3) //Esto imprimira Decorations(rocks = slate)
     println(d4) //Esto imprimira Decorations(rocks = slate)
+
+    // 5.1 .- Y creamos una instancia (una decoración) con esta
+    val d5 = Decorations2("crystal", "wood", "diver")
+    println(d5)
+
+    // 6.- Par obtener todas las propiedades y asignarlas a variables Kotlin nos permite usar un proceso llamado decomposition.
+    //Podemos hacer tres variables una para cada propiedad y asignarle el objetos a estas Kotlin pone el valor de la propiedad en cada variable y entonces
+    //se pueda usar
+
+    val(rock: kotlin.String, wood: kotlin.String, diver: kotlin.String) = d5
+    println(rock) // Imprimira crystal
+    println(wood) // Imprimira wood
+    println(diver) // Imprimira diver
 }
 
 // A menudo tenemos clase que principalmente actuan como contenedores de datos. En Kotlin, para las clases que principalmente almacenan datos hay una clase
@@ -36,3 +49,5 @@ fun makeDecorations(){
 
 data class Decorations(val rocks: String){}
 
+//5.- Hagamos un data class con algunas otras decoraciones la llamaremos Decorations2 y le agregaremos wood y diver
+data class Decorations2(val rocks: String, val wood: String, val diver: String){}
